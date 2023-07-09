@@ -1,0 +1,55 @@
+.toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle__input {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  
+  .toggle-track {
+    position: relative;
+    display: flex;
+    width: 55px;
+    height: 30px;
+    margin-right: 10px;
+    border: 3px solid #1B5E20;
+    border-radius: 10px;
+    background: #db2b2b;
+    cursor: pointer;
+  
+    transition: background-color 300ms ease-in-out;
+  }
+  
+  .toggle-indicator {
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    background: #cecece;
+    transition: 300ms;
+  }
+  
+  .toggle__input {
+    outline: none;
+  }
+  .toggle__input:focus + .toggle-track {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+  
+  .toggle__input:checked + .toggle-track .toggle-indicator {
+    background: #cecece;
+    transform: translateX(30px);
+  }
+  
+  .toggle__input:checked + .toggle-track {
+    background: #43ce49;
+  }

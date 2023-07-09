@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Form search images</title>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+  <body class="body">
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-form-input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-form-btn" type="submit">Search</button>
+      </form>
+
+      <label class="toggle infinite-scroll" for="uniqueID">
+        <input
+          type="checkbox"
+          class="infinite-scroll-input toggle__input"
+          id="uniqueID"
+        />
+        <span class="toggle-track">
+          <span class="toggle-indicator"> </span>
+        </span>
+        Infinite Scroll
+      </label>
+    </header>
+    <main>
+      <section class="section-gallery">
+        <div class="container">
+          <ul class="gallery-list" id="gallery-list"></ul>
+          <button type="button" class="load-more">Load more</button>
+        </div>
+      </section>
+    </main>
+    <div class="object-for-observation"></div>
+    <div class="backdrop-loader">
+      <div class="lds-dual-ring"></div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
