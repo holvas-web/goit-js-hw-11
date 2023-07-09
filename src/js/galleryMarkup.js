@@ -36,5 +36,5 @@ const createMarkupList = ({
         </a>
       </li>`;
   
-  export const makeGalleryMarkup = gallery =>
-    gallery.reduce((acc, image) => (acc += createMarkupList(image)), '');s
+  export const galleryMarkup = gallery =>
+    gallery.reduce((acc, image) => (acc += createMarkupList(image)), '');
